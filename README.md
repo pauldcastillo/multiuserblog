@@ -7,6 +7,7 @@ Creates a simple multi user blog.
 
 ### QUICK START:
 **Prerequisites for running locally:**
+
 ..* Have a browser installed. (Developed only for support with Chrome)
 ..* Have Python installed [Download here](https://www.python.org/downloads/ “Download Python”)
 ..* Be connected to the internet.
