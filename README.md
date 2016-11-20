@@ -68,4 +68,5 @@ Creates a simple multi user blog.
 
 ### AUTHORS:
 Paul Castillo
+
 Udacity
