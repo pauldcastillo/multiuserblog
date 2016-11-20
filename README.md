@@ -24,43 +24,43 @@ Creates a simple multi user blog.
 
 ### FILES INCLUDED:
 
-> paulsblog161018/
->     |---- main.py
->     |---- app.yaml
->     |---- index.yaml
->     |---- favicon.ico
->     |---- css
->     |
->     |      |---- bootstrap.min.css
->     |      |---- bootstrap-theme.min.css
->     |      |---- main.css
->     |
->     |---- img
->     |      |---- zero.png
->     |
->     |---- templates
->            |---- base.html
->            |---- blog_front.html
->            |---- comment.html
->            |---- comment_sml.html
->            |---- delete_comment.html
->            |---- deletepost.html
->            |---- dislike.html
->            |---- edit_comment.html
->            |---- edit_post.html
->            |---- front.html
->            |---- index.html
->            |---- like.html
->            |---- login.html
->            |---- my_posts.html
->            |---- new_comment.html
->            |---- new_post.html
->            |---- post.html
->            |---- post_editor.html
->            |---- shopping_list.html
->            |---- signup.html
->            |---- static_post.html
->            |---- welcome.html
+paulsblog161018/
+     |---- main.py
+     |---- app.yaml
+     |---- index.yaml
+     |---- favicon.ico
+     |---- css
+     |
+     |      |---- bootstrap.min.css
+     |      |---- bootstrap-theme.min.css
+     |      |---- main.css
+     |
+     |---- img
+     |      |---- zero.png
+     |
+     |---- templates
+            |---- base.html
+            |---- blog_front.html
+            |---- comment.html
+            |---- comment_sml.html
+            |---- delete_comment.html
+            |---- deletepost.html
+            |---- dislike.html
+            |---- edit_comment.html
+            |---- edit_post.html
+            |---- front.html
+            |---- index.html
+            |---- like.html
+            |---- login.html
+            |---- my_posts.html
+            |---- new_comment.html
+            |---- new_post.html
+            |---- post.html
+            |---- post_editor.html
+            |---- shopping_list.html
+            |---- signup.html
+            |---- static_post.html
+            |---- welcome.html
 
 
 ### AUTHORS:
