@@ -27,6 +27,7 @@ Creates a simple multi user blog.
 ### FILES INCLUDED:
 
 > paulsblog161018/
+
 >     |---- main.py
 >     |---- app.yaml
 >     |---- index.yaml
