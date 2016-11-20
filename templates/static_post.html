@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="error">{{error["text"]}}</div>
+    {% if not error["code"] == "404" %}
+        {{ post.render(user, is_static) | safe }}
+    {% endif %}
+{% endblock %}

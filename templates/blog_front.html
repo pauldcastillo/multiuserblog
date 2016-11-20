@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  <div class="blog-heading">Blog Posts</div>
+  {% for post in posts %}
+    {% if error %}
+        {% if post.key().id() == error["post"] %}
+            <div class="error">{{error["text"]}}</div>
+        {% endif %}
+    {% endif %}
+    {{ post.render(user) | safe }}
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% block content %}
+    <div>
+        <div class="row">
+            <div class="post-title col-sm-12">
+                <a href="./{{post.key().id()}}">{{post.subject}}</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="post-stats col-sm-4">
+                <span class="post-stats-title">Created by: </span>
+                {{post.get_post_creator_name(post.created_user_id)}}
+            </div>
+            <div class="post-stats datetime col-sm-6">
+                <span class="post-stats-title">Time created: </span>
+                {{post.created}}
+                </div>
+        </div>
+        <div class="row">
+            <pre class="post-body col-sm-12">{{post.content}}</pre>
+        </div>
+        <div class="row">
+            <form method="post">
+                <div class="col-sm-6 col-md-4">
+                    {% if user %}
+                        <input type="hidden" name="post_id" value="{{ post.key().id() }}">
+                        <input type="hidden" name="user_id" value="{{ user.key().id() }}">
+                        {% if not user.user_id_str(user.key().id()) == post.created_user_id and not post.has_user_liked_post(user.key().id(), post.key().id())%}
+                            {{post.render_like(post) | safe}}
+                        {% else %}
+                            {{post.render_like(post, disabled=True) | safe}}
+                        {% endif %}
+                        {% if not user.user_id_str(user.key().id()) == post.created_user_id and not post.has_user_disliked_post(user.key().id(), post.key().id())%}
+                            {{post.render_dislike(post) | safe}}
+                        {% else %}
+                            {{post.render_dislike(post, disabled=True) | safe }}
+                        {% endif %}
+                    {% else %}
+                        {{post.render_like(post, disabled=True) | safe}}
+                        {{post.render_dislike(post, disabled=True) | safe }}
+                    {% endif %}
+                </div>
+                <div class="error">{{ error }}</div>
+                {% if user %}
+                    {% if user.user_id_str(user.key().id()) == post.created_user_id %}
+                    <div class="col-sm-2 col-xs-4">
+                        <input class="button edit-post" type="submit" name="edit_post" value="Edit Post">
+                    </div>
+                    <div class="col-sm-2 col-xs-4">
+                        <input class="button edit-post" type="submit" name="delete_post" value="Delete Post">
+                    </div>
+                    {% endif %}
+                {% endif %}
+                    <div class="col-sm-2 col-xs-4">
+                        <input class="button edit-post" type="submit" name="add_comment" value="Add Comment">
+                    </div>
+            </form>
+
+        </div>
+        <hr>
+        <div class="row">
+            {% if is_static %}
+                <div class="comments-heading">Comments</div>
+                {% for comment in post.get_post_comments(post.key().id()) %}
+                    <div class="comment">
+                        {{ comment.render_comment(comment.key().id(), user, is_static) | safe }}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="comments-heading">Top Comments</div>
+                {% for comment in post.get_top_comments(post.key().id()) %}
+                    <div class="comment multi-comment col-sm-4 col-md-4">
+                        {{ comment.render_comment(comment.key().id(), user, is_static) | safe }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    <hr>
+    </div>
+{% endblock %}

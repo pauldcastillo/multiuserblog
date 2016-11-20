@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+        <div class="row">
+            <h2 class="delete-post-title center">Are you sure you want to delete your post?</h2>
+        </div>
+        <div class="row">
+            <p class="error important center">This will permanently delete your post. You will not be able to recover it!</p>
+        </div>
+        <div class="row">
+            <input type="hidden" name="comment_id" value="{{comment_id}}">
+            <input class="button delete-post-button" type="submit" name="yes" value="Yes, delete my comment.">
+            <input class="button delete-post-button" type="submit" name="no" value="No, do not delete my comment.">
+        </div>        
+    </form>
+    <hr>
+{% endblock %}

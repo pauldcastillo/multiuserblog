@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="welcome-title">Welcome, {{user.name}}!</div>
+<div class="signed-in-option">
+    <a href="./blog">View All Posts</a>
+    <br>
+    <a href="./myposts">View My Posts</a>
+    <br>
+    <a href="./newpost">Write A New Post</a>
+    <br>
+    <a href="./logout">Logout</a>
+</div>
+<br>
+<br>
+<br>
+<hr>
+
+
+{% endblock %}

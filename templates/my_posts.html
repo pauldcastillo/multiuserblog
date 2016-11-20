@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+    <div class="blog-heading">{{user.name}}'s Blog Posts</div>
+    {% if posts %}
+        {% for post in posts %}
+            {% if error %}
+                {% if post.key().id() == error["post"] %}
+                    <div class="error">{{error["text"]}}</div>
+                {% endif %}
+            {% endif %}
+            {{ post.render(user) | safe }}
+        {% endfor %}
+    {% else %}
+        <h2>You haven't posted anything yet!</h2>
+        <div class="signed-in-option">
+        Try making a
+        <a href="./newpost">new post</a>
+        .
+        </div>
+    {% endif %}
+    <br>
+    <br>
+{% endblock %}
