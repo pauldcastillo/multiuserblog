@@ -8,12 +8,12 @@ Creates a simple multi user blog.
 ### QUICK START:
 **Prerequisites for running locally:**
 
-..* Have a browser installed. (Developed only for support with Chrome)
-..* Have Python installed [Download here](https://www.python.org/downloads/ “Download Python”)
-..* Be connected to the internet.
-..* Clone the repository to your local machine.
-..* Install the google cloud sdk.
-..* Ensure all files are in the appropriate folder.
+* Have a browser installed. (Developed only for support with Chrome)
+* Have Python installed [Download here](https://www.python.org/downloads/ “Download Python”)
+* Be connected to the internet.
+* Clone the repository to your local machine.
+* Install the google cloud sdk.
+* Ensure all files are in the appropriate folder.
 
 **Steps:**
 
@@ -27,7 +27,6 @@ Creates a simple multi user blog.
 ### FILES INCLUDED:
 
 > paulsblog161018/
-
 >     |---- main.py
 >     |---- app.yaml
 >     |---- index.yaml
