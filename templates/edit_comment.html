@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Edit Comment</h1>
+  {{ user.render_post_editor(subject = subject, content = content, error = error) | safe }}
+  <hr>
+
+
+{% endblock %}

@@ -1,0 +1,3 @@
+<div class="col-sm-6 col-xs-6">
+    <input class="button dislike-button {% if disabled %}disabled disabled-dislike{% endif %} col-sm-6" type="submit" name="Dislikes" value="Dislike: {{post.get_num_dislikes(post.key().id())}}" {% if disabled %}disabled{% endif %}></input>
+</div>

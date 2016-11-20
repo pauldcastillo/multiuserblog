@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>New Blog Post</h1>
+  {{ user.render_post_editor(subject = subject, content = content, error=error) | safe }}
+  <br>
+  <br>
+  <br>
+  <hr>
+
+
+{% endblock %}
