@@ -196,6 +196,13 @@ pre {
     border-width: medium;
 }
 
+.edit-post-button {
+    font-size: 16pt;
+    margin-top: 5%;
+    border-style: outset;
+    border-width: medium;
+}
+
 .like-button {
     background-color: green;
     color: black;

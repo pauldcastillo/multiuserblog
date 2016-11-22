@@ -3,6 +3,9 @@
       <input type="text" name="subject" value="{{subject}}">
     <label>Content</label>
       <textarea name="content">{{content}}</textarea>
-    <input type="submit" name="submit">
+    <div class="row">
+        <input class="edit-post-button col-sm-4 col-sm-offset-1" type="submit" name="submit" value="Submit">
+        <input class="edit-post-button col-sm-4 col-sm-offset-2" type="submit" name="cancel" value="Cancel">
+    </div>
     <div class="error edit-post-error">{{error}}</div>
 </form>
