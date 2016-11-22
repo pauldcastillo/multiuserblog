@@ -23,12 +23,15 @@ Creates a simple multi user blog.
 ### HOW TO USE:
 1. Navigate to your local server using a browser. The default is: http://localhost:8080/. Note this was only developed for Chrome, but should work fairly responsively.
 
+Alternatively, navigate to https://paulsblog161018.appspot.com/blog.
+
 
 ### FILES INCLUDED:
 
 > paulsblog161018/
 
 >     |---- main.py
+>     |---- models.py
 >     |---- app.yaml
 >     |---- index.yaml
 >     |---- favicon.ico
