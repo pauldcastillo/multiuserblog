@@ -321,11 +321,8 @@ class Users(db.Model):
     @classmethod
     def user_login(cls, name, password):
         """Validates user's password given the username."""
-        logging.info('username = %s' % name)
-        logging.info('password = %s' % password)
         user = cls.by_name(name)
-        logging.info('user = %s' % type(user))
-        if user and validate_password(name, password, user.password):
+        if user and main.validate_password(name, password, user.password):
             return user
 
     @classmethod

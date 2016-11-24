@@ -821,7 +821,7 @@ class LoginPageHandler(BlogHandler):
     """Handler for the login page, './login'."""
     def render_login_page(self, password_error=""):
         """Renders the login page."""
-        self.render('login.html')
+        self.render('login.html', password_error=password_error)
 
     def get(self):
         """
@@ -842,13 +842,15 @@ class LoginPageHandler(BlogHandler):
         self.username = self.request.get('username')
         self.password = self.request.get('password')
 
-        user = Users.user_login(self.username, self.password)
+        user = models.Users.user_login(self.username, self.password)
         
-        if user:
-            self.page_login(user)
-            self.redirect('/welcome')
+        if self.username and self.password:
+            if user:
+                self.page_login(user)
+                self.redirect('/welcome')
+            else:
+                self.render_login_page(password_error = "Invalid Login")
         else:
-            logging.info("login failed")
             self.render_login_page(password_error = "Invalid Login")
 
 class LogoutHandler(BlogHandler):
